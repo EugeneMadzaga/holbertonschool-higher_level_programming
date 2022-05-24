@@ -12,4 +12,4 @@ class LockedClass:
         if attribute == "first_name":
             self.__dict__[attribute] = value
         else:
-            raise AttributeError("'LockedClass' No attribute "attribute"")
+            raise AttributeError("'Error' No attribute '" + attribute + "'")
