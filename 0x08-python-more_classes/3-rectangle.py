@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 1-rectangle.py
+# 3-rectangle.py
 """
 A rectangle with width and height.
 """
@@ -47,3 +47,31 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    # Functions
+    def area(self):
+        """ Returns area of rectangle
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """ Returns perimeter of rectangle
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """ print() __str__ method funtion to return rectangle in char '#'
+        """
+        res = ""
+        if self.__width == 0 or self.__height == 0:
+            return res
+
+        for i in range(self.__height):
+            if i == self.__height - 1:
+                res += ('#' * self.__width)
+            else:
+                res += (('#' * self.__width) + '\n')
+        return res
