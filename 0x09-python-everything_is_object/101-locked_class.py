@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-class LockedClass:
-    """A locked class only allow the instance
-    attribute 'first_name'"""
-    __slots__ = ['first_name']
+""" LockedClass Class """
+
+class LockedClass():
+    """ variables declarations """
+    __slots__ = ('first_name')
