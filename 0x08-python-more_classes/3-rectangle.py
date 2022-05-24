@@ -26,7 +26,7 @@ class Rectangle:
     def width(self, value):
         """ Setter for width
         """
-        if type(value) != int:
+        if isinstance(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -42,7 +42,7 @@ class Rectangle:
     def height(self, value):
         """ Setter for height
         """
-        if type(value) != int:
+        if isinstance(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
@@ -63,7 +63,7 @@ class Rectangle:
             return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """ print() __str__ method funtion to return rectangle in char '#'
+        """ print() __str__ methodn return rectangle in char
         """
         res = ""
         if self.__width == 0 or self.__height == 0:
