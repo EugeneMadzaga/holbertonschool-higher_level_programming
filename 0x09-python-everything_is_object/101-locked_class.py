@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 class LockedClass:
     """LockedClass object has no attribute 'first_name'
     """
