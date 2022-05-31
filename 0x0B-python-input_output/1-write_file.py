@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" function that writes a string to a text file (UTF8) and returns the number of characters written
-"""
+"""function that writes str to a text file & return number of char"""
 
 
 def write_file(filename="", text=""):
