@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-"""Script adding arguments to py list"""
-import sys
-import os.path
+from os import path
+from sys import argv
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
+if path.exists('add_item.json'):
+    obj_json_file = load_from_json_file('add_item.json')
+else:
+    obj_json_file = []
 
-save_file = __import__('5-save_to_json_file').save_to_json_file
-load_file = __import__('6-load_from_json_file').load_from_json_file
+for i in range(1, len(argv)):
+    obj_json_file.append(argv[i])
 
-my_list = []
-if os.path.exists("add_item.json"):
-    my_list = load_file("add_item.json")
-
-for arg in sys.argv[1:]:
-    my_list.append(arg)
-
-save_file(my_list, "add_item.json")
+save_to_json_file(obj_json_file, 'add_item.json')
