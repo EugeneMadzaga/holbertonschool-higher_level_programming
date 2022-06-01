@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def pascal_triangle(n):
-"""Function that returns the pascal triangle
-"""
+    """
+    Create a function def pascal_triangle(n):
+    """
 
     matrix = []
     prev = []
